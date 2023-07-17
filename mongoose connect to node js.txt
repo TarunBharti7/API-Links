@@ -1,0 +1,14 @@
+const mongoose = require('mongoose');
+
+// Connect to MongoDB
+mongoose.connect('mongodb://127.0.0.1:27017/mydatabase', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+  .then(() => {
+    console.log('Connected to MongoDB');
+    // Start your application or perform any other operations
+  })
+  .catch((error) => {
+    console.error('Error connecting to MongoDB:', error.message);
+  });
